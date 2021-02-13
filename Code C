@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main()
+{
+   char ch,oldchar;
+    int i;
+    int cpt;
+    printf("give a character \n");
+    scanf("%c",&ch);
+    oldchar=ch;
+if('m'<ch && ch<='z'){
+    cpt=ch-'m'-1;
+    ch='a'+cpt;
+}
+else if('a'<=ch  && ch<='m') {
+    ch=ch+13;}
+else if('M'<ch && ch<='Z'){
+ 
+    cpt=ch-'M'-1;
+    ch='A'+cpt;
+}
+else if('A'<=ch  && ch<='M') {
+    ch=ch+13;
+}
+    
+printf("the rot13 of %c is %c  \n",oldchar,ch);
+    return 0;
+}
